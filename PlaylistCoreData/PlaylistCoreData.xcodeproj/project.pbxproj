@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		638AD96D22FB375D005FA8B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638AD96C22FB375D005FA8B3 /* AppDelegate.swift */; };
-		638AD96F22FB375D005FA8B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638AD96E22FB375D005FA8B3 /* ViewController.swift */; };
 		638AD97222FB375D005FA8B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638AD97022FB375D005FA8B3 /* Main.storyboard */; };
 		638AD97522FB375D005FA8B3 /* PlaylistCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 638AD97322FB375D005FA8B3 /* PlaylistCoreData.xcdatamodeld */; };
 		638AD97722FB375F005FA8B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638AD97622FB375F005FA8B3 /* Assets.xcassets */; };
 		638AD97A22FB375F005FA8B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638AD97822FB375F005FA8B3 /* LaunchScreen.storyboard */; };
+		638AD98222FB3BDC005FA8B3 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638AD98122FB3BDC005FA8B3 /* CoreDataStack.swift */; };
+		638AD98522FB3F2A005FA8B3 /* Playlist+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638AD98422FB3F2A005FA8B3 /* Playlist+Convenience.swift */; };
+		638AD98722FB40B8005FA8B3 /* Song+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638AD98622FB40B8005FA8B3 /* Song+Convenience.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		638AD96922FB375D005FA8B3 /* PlaylistCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaylistCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		638AD96C22FB375D005FA8B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		638AD96E22FB375D005FA8B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		638AD97122FB375D005FA8B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		638AD97422FB375D005FA8B3 /* PlaylistCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlaylistCoreData.xcdatamodel; sourceTree = "<group>"; };
 		638AD97622FB375F005FA8B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		638AD97922FB375F005FA8B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		638AD97B22FB375F005FA8B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		638AD98122FB3BDC005FA8B3 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		638AD98422FB3F2A005FA8B3 /* Playlist+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Playlist+Convenience.swift"; sourceTree = "<group>"; };
+		638AD98622FB40B8005FA8B3 /* Song+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Song+Convenience.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,33 @@
 		638AD96B22FB375D005FA8B3 /* PlaylistCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				638AD96C22FB375D005FA8B3 /* AppDelegate.swift */,
-				638AD96E22FB375D005FA8B3 /* ViewController.swift */,
 				638AD97022FB375D005FA8B3 /* Main.storyboard */,
+				638AD97322FB375D005FA8B3 /* PlaylistCoreData.xcdatamodeld */,
+				638AD98822FB42C4005FA8B3 /* Model */,
+				638AD98322FB3E9C005FA8B3 /* Resources */,
+			);
+			path = PlaylistCoreData;
+			sourceTree = "<group>";
+		};
+		638AD98322FB3E9C005FA8B3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				638AD96C22FB375D005FA8B3 /* AppDelegate.swift */,
 				638AD97622FB375F005FA8B3 /* Assets.xcassets */,
 				638AD97822FB375F005FA8B3 /* LaunchScreen.storyboard */,
 				638AD97B22FB375F005FA8B3 /* Info.plist */,
-				638AD97322FB375D005FA8B3 /* PlaylistCoreData.xcdatamodeld */,
 			);
-			path = PlaylistCoreData;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		638AD98822FB42C4005FA8B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				638AD98422FB3F2A005FA8B3 /* Playlist+Convenience.swift */,
+				638AD98622FB40B8005FA8B3 /* Song+Convenience.swift */,
+				638AD98122FB3BDC005FA8B3 /* CoreDataStack.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				638AD96F22FB375D005FA8B3 /* ViewController.swift in Sources */,
 				638AD96D22FB375D005FA8B3 /* AppDelegate.swift in Sources */,
+				638AD98722FB40B8005FA8B3 /* Song+Convenience.swift in Sources */,
 				638AD97522FB375D005FA8B3 /* PlaylistCoreData.xcdatamodeld in Sources */,
+				638AD98222FB3BDC005FA8B3 /* CoreDataStack.swift in Sources */,
+				638AD98522FB3F2A005FA8B3 /* Playlist+Convenience.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +312,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 83YG3ZQCH4;
-				INFOPLIST_FILE = PlaylistCoreData/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PlaylistCoreData/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 83YG3ZQCH4;
-				INFOPLIST_FILE = PlaylistCoreData/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PlaylistCoreData/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
